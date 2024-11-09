@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import io from "socket.io-client";
 import ScrollToBottom from "react-scroll-to-bottom";
 
-const socket = io("http://localhost:5000");
+const socket = io(process.env.REACT_APP_API_URL);
 
 const Room = () => {
   const [username, setUsername] = useState("");
